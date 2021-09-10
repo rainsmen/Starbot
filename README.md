@@ -3,6 +3,9 @@
 ![尘宝最棒了！](http://175.24.71.180/wp-content/uploads/2021/08/stardust_1.jpg "尘宝最棒了🌟！")
 
 基于go-cqhttp的QQ机器人，使用Python编写。
+请注意，你需要具有一定的电脑基础来使用此应用。
+
+## 当前项目状态：🛑暂停（工作繁忙更新随缘）
 
 ---
 
@@ -71,9 +74,11 @@ Starbot诞生的初衷是方便我工作，维护工作的QQ客服群每天重�
 
 ## 入门
 
+写在前面，请注意，你下载的源码/发行版，均**不包含语料库**，带的数据库是空库！你需要自己填充语料库。
+
 1. 前往[go-cqhttp](https://github.com/Mrs4s/go-cqhttp)下载release，并解压。
 
-1. 前往[release](https://github.com/star-whisper9/Starbot/releases)下载最新的release版本，并解压。
+1. 前往[releases](https://github.com/star-whisper9/Starbot/releases)下载最新的release版本，并解压。
 
 1. 正确安装和配置Python3.9.7+。
 
@@ -81,7 +86,7 @@ Starbot诞生的初衷是方便我工作，维护工作的QQ客服群每天重�
 
    1). 根据go-cqhttp的帮助配置你的go-cqhttp，请设置至少一个http服务和一个Websocket服务。
 
-   2). 根据这份sample进行你的Starbot配置（**不要缺少任何配置项！任何配置项的缺失/错误都会使机器人无法使用**）：
+   2). 根据这份sample修改解压出的config.ini（**不要缺少任何配置项！任何配置项的缺失/错误都会使机器人无法使用**）：
 ```
 	[sys_config]
 	;在这里填入你的Websocket服务器地址，一般情况下你只需要修改端口号与你的go-cqhttp配置一致即可
