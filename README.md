@@ -1,14 +1,14 @@
-# Starbot
+# <center>Starbot
 
-![尘宝最棒了！](http://175.24.71.180/wp-content/uploads/2021/09/01acb54d-c8f9-4b07-bd28-65369dce49c3.jpg "尘宝最棒了！🌟")
+<div align="center"><img src="http://175.24.71.180/wp-content/uploads/2021/09/01acb54d-c8f9-4b07-bd28-65369dce49c3.jpg" width="200px"></div>
 
 基于go-cqhttp的QQ机器人，使用Python编写。
 
 ---
 
 ## 目录
-### · 简介
-### · 自行编译
+### [· 简介](#简介)
+### [· 自行编译](#自行编译)
 
 ---
 
