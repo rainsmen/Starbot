@@ -1,6 +1,6 @@
 # Starbot
 
-![尘宝最棒了！](http://175.24.71.180/wp-content/uploads/2021/08/stardust_1.jpg "尘宝最棒了🌟！")
+![尘宝最棒了！](http://175.24.71.180/wp-content/uploads/2021/09/01acb54d-c8f9-4b07-bd28-65369dce49c3.jpg "尘宝最棒了！🌟")
 
 基于go-cqhttp的QQ机器人，使用Python编写。
 
@@ -63,59 +63,9 @@ Starbot诞生的初衷是方便我工作，维护工作的QQ客服群每天重�
   
 ### 其他
 
-消息匹配和回复，使用的不是通常小玩具的文本文件，而是SQLite/MySQL。master分支为SQLite Ver，MySQL在隔壁分支。没有特殊需求的话使用master分支就行了。
+消息匹配和回复，使用的是SQLite/MySQL。master分支为SQLite Ver，MySQL在隔壁分支。没有特殊需求的话使用master分支就行了。
 
 代码写的很屎，别骂，只是出于爱好学编程，接受批评但不接受阴阳怪气或者出口成脏。
-
----
-
-## 入门
-
-1. 前往[go-cqhttp](https://github.com/Mrs4s/go-cqhttp)下载release，并解压。
-
-1. 前往[release](https://github.com/star-whisper9/Starbot/releases)下载最新的release版本，并解压。
-
-1. 正确安装和配置Python3.9.7+。
-
-1. 进行以下配置：
-
-   1). 根据go-cqhttp的帮助配置你的go-cqhttp，请设置至少一个http服务和一个Websocket服务。
-
-   2). 根据这份sample进行你的Starbot配置（**不要缺少任何配置项！任何配置项的缺失/错误都会使机器人无法使用**）：
-```
-	[sys_config]
-	;在这里填入你的Websocket服务器地址，一般情况下你只需要修改端口号与你的go-cqhttp配置一致即可
-	ws_url = ws://127.0.0.1:6700/ws
-	;在这里填入你的http服务器地址，一般情况下你只需要修改端口号与你的go-cqhttp配置一致即可
-	http_url = http://127.0.0.1:5700/
-	;在这里像这样填写你的数据库绝对路径"C:\\Starbot\\bot.db"，请不要包含引号，请不要修改数据库文件名！
-	database_url = 
-	;同样的，填写你的色图文件夹绝对路径，将单个反斜杠替换为两个
-	setu_folder = 
-	;修改日志的输出级别，它暂时没什么用，但你如果不知道修改它的后果就不要动
-	log_level = INFO
-	;填写你的机器人所有者QQ号，只有所有者能够私聊添加新的回复！
-	admin_id = 
-	;填写你的机器人QQ号
-	botqq = 
-
-	[group_settings]
-	;开启关键字检测的QQ群，注意，色图发送不受此项影响，意味着机器人所在的任何群都能通过发送"setu"四个字母来触发色图发送，这是我故意为之的。
-	enabled_groups = [ ]
-	;是否必须要at机器人才能触发关键字检测，True为必须at。同样的，它不影响色图发送。
-	enabled_at = True
-	;机器人的回复是否引用源消息，True时机器人的所有关键字回复都会引用源消息。
-	reply_mode = True
-	;群组管理功能的管理员账号列表，只有列表内的QQ可以使用管理功能，注意，目前版本管理功能是共用参数的，如果你不知道这意味着什么，就只填写你自己的QQ！
-	gr_admin_id = [ ]
-
-	[private_settings]
-	;预留给后期版本的设定块
-```
-   
-5. 启动go-cqhttp，再启动机器人。
-
-关于具体使用方式，会单独写在文档内，但是不是现在（咕咕咕）。
 
 ---
 
@@ -126,10 +76,4 @@ Starbot诞生的初衷是方便我工作，维护工作的QQ客服群每天重�
 修改编译需要注意以下内容：
 
 如果你仅仅只是修改源码，直接使用.py文件，那么没有什么问题。如果你需要将它自行打包，请记得分词使用的jieba库在使用Pyinstaller打包时会出现问题，你需要修改tfidf源码，请自己百度。
-
----
-
-## 进阶使用
-
-这个板块暂时是空的，未来会在此处放置文档链接以及基础的多群多数据库（实例）使用方式。
 
