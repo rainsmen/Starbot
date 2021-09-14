@@ -77,12 +77,11 @@ def set_group_name(ws, group_id, group_name):
     ws.send(post_data)
 
 
-def set_group_special_title(ws, group_id, user_id, special_title, duration):
+def set_group_special_title(ws, group_id, user_id, special_title):
     data = {
         'group_id': group_id,
         'user_id': user_id,
-        'special_title': special_title,
-        'duration':duration
+        'special_title': special_title
     }
     action = 'set_group_special_title'
     requests.get(http_url + action, params=data)
@@ -143,8 +142,10 @@ def main(ws, message):
         set_group_admin(ws, sliced_message[2], sliced_message[3], sliced_message[4])
     elif sliced_message[1] == '设置群名片':
         set_group_card(ws, sliced_message[2], sliced_message[3], sliced_message[4])
+    elif sliced_message[1] == '设置群名':
+        group_whole_ban(ws, sliced_message[2], sliced_message[3])
     elif sliced_message[1] == '设置头衔':
-        set_group_special_title(ws, sliced_message[2], sliced_message[3], sliced_message[4], sliced_message[5])
+        set_group_special_title(ws, sliced_message[2], sliced_message[3], sliced_message[4])
     elif sliced_message[1] == '上传群文件':
         upload_group_file(ws, sliced_message[2], sliced_message[3], sliced_message[4])
     elif sliced_message[1] == '发公告':
